@@ -9,7 +9,7 @@ const About = (props) => {
       <br />
       <p>For more information, please</p>
       <p>
-        view our
+        view our 
         <a
           href="#"
           onClick={() => {
@@ -18,6 +18,7 @@ const About = (props) => {
         >
           website
         </a>
+        .
       </p>
     </div>
   );
