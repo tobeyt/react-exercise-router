@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Products = (props) => {
-  console.log(props);
   const {
     match: { params, url },
   } = props;
@@ -33,15 +32,10 @@ const Products = (props) => {
     return (
       <div>
         {products.map((cur) => (
-          <>
-            <Link
-              key={cur.id.toString()}
-              to={`/products/${cur.id} key={cur.name}`}
-            >
-              {cur.name}
-            </Link>
+          <div key={cur.id}>
+            <Link to={`/products/${cur.id} key={cur.name}`}>{cur.name}</Link>
             <br />
-          </>
+          </div>
         ))}
       </div>
     );
